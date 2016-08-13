@@ -1,0 +1,49 @@
+<%= link_to("<< Back to List",{:action => 'index'}, :class => 'back-link') %>
+
+<div class="pages new">
+    <h2>Create page</h2>
+    
+    <%= form_for(:page, :url => {:action => 'create'}) do |f| %>
+           <%= render(:partial => "form", :locals => {:f => f}) %>
+        <div class = "form-buttons">
+            <%= submit_tag("Create page") %>
+        </div>
+       
+    <% end %>
+
+</div><%= link_to("<< Back to List",{:action => 'index'}, :class => 'back-link') %>
+
+<div class="pages new">
+    <h2>Create page</h2>
+    
+    <%= form_for(:page, :url => {:action => 'create'}) do |f| %>
+         <table summary="Pages form fields">
+            <tr>
+                <th>subject id</th>
+                <td><%= f.text_field(:subject_id) %></td>
+            </tr>
+            
+            <tr>
+                <th>Name</th>
+                <td><%= f.text_field(:name) %></td>
+            </tr>
+            <tr>
+                <th>Position</th>
+                <td><%= f.text_field(:position) %></td>
+            </tr>
+            <tr>
+                <th>permalink</th>
+                 <td><%= f.text_field(:permalink) %></td>
+            </tr>
+            <tr>
+                <th>Visible?</th>
+                 <td><%= f.text_field(:visible) %></td>
+            </tr>
+        </table>
+        <div class = "form-buttons">
+            <%= submit_tag("Create page") %>
+        </div>
+       
+    <% end %>
+
+</div>
